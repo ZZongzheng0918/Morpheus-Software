@@ -12,8 +12,3 @@ RSS 2025<br>
 <sup>4</sup> MGI Tech, Shenzhen, China, <sup>5</sup> Beihang University<br>
 <sub>(* indicates equal contribution)</sub><br>
 [**RSS official**](https://roboticsconference.org/program/papers/80/) | [**Project Page**](https://jiawenyang-ch.github.io/Morpheus-Hardware-Design/)
-</div>
-<div align="center">
-  <img src="media/teaser.png" alt="teaser_1" height="500"/>
-  <img src="media/mechanism.png" alt="teaser_1" height="430"/>
-</div>
