@@ -12,3 +12,74 @@ RSS 2025<br>
 <sup>4</sup> MGI Tech, Shenzhen, China, <sup>5</sup> Beihang University<br>
 <sub>(* indicates equal contribution)</sub><br>
 [**RSS official**](https://roboticsconference.org/program/papers/80/) | [**Project Page**](https://jiawenyang-ch.github.io/Morpheus-Hardware-Design/)
+
+</div>
+
+## Environment
+
+- Linux
+- Python 3.10
+- Pytorch 2.3.1
+- CUDA 12.1
+- Blender 3.4.1
+- ffmpeg 4.4.1
+
+Clone the repo:
+  ```bash
+  git clone https://github.com/ZZongzheng0918/Morpheus-Software.git
+  cd Morpheus-Software
+  ```  
+Create conda environment:
+```bash
+conda create -n morpheus python=3.10
+conda activate morpheus
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+```
+
+
+## **Demo**
+Download Blender and put it in this directory.
+```bash
+wget https://ftp.nluug.nl/pub/graphics/blender/release/Blender3.4/blender-3.4.1-linux-x64.tar.xz
+tar -xf blender-3.4.1-linux-x64.tar.xz
+mv blender-3.4.1-linux-x64 blender && rm blender-3.4.1-linux-x64.tar.xz
+```
+Download the pretrained models from [model.pth](https://huggingface.co/ZiqiaoPeng/Morpheus). Put the pretrained models under `pretrain_model` folder. 
+Put the audio under `aduio` folder and run
+```bash
+python demo.py --wav_path "./audio/disgust.wav"
+```
+The generated animation will be saved in `result` folder.
+
+
+
+## **License and Acknowledgements**
+This source code is licensed under the MIT liscence found in the LICENSE file in the root directory of this repository.
+
+
+
+## **Citation**
+If you find this project useful, feel free to cite our work!
+<div style="display:flex;">
+<div>
+
+```bibtex
+@article{Morpheus,
+  title={Morpheus: A Neural-driven Animatronic Face with Hybrid Actuation and Diverse Emotion Control},
+  author={Zongzheng Zhang and Jiawen Yang and Ziqiao Peng and Meng Yang and Jianzhu Ma and Lin Cheng and Huazhe Xu and Hang Zhao and Hao Zhao},
+  journal={Robotics: Science and Systems (RSS)},
+  year={2025}
+}
+```
+
+## **Acknowledgement**
+Here are some great resources we benefit:
+- [EmoTalk](https://github.com/psyai-net/EmoTalk_release) for codebase
+- [Faceformer](https://github.com/EvelynFan/FaceFormer) for training pipeline
+- [EVP](https://github.com/jixinya/EVP) for training dataloader
+- [Speech-driven-expressions](https://github.com/YoungSeng/Speech-driven-expressions) for rendering
+- [Wav2Vec2 Content](https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-english) and [Wav2Vec2 Emotion](https://huggingface.co/r-f/wav2vec-english-speech-emotion-recognition) for audio encoder
+- [Head Template](http://filmicworlds.com/blog/solving-face-scans-for-arkit/) for visualization.
+
+Thanks to John Hable for sharing his head template under the CC0 license, which is very helpful for us to visualize the results.
