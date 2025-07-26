@@ -67,10 +67,10 @@ If you find this project useful, feel free to cite our work!
 <div>
 
 ```bibtex
-@article{Morpheus,
+@article{zhang2025morpheus,
   title={Morpheus: A Neural-driven Animatronic Face with Hybrid Actuation and Diverse Emotion Control},
-  author={Zongzheng Zhang and Jiawen Yang and Ziqiao Peng and Meng Yang and Jianzhu Ma and Lin Cheng and Huazhe Xu and Hang Zhao and Hao Zhao},
-  journal={Robotics: Science and Systems (RSS)},
+  author={Zhang, Zongzheng and Yang, Jiawen and Peng, Ziqiao and Yang, Meng and Ma, Jianzhu and Cheng, Lin and Xu, Huazhe and Zhao, Hang and Zhao, Hao},
+  journal={arXiv preprint arXiv:2507.16645},
   year={2025}
 }
 ```
